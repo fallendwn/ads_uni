@@ -1,6 +1,17 @@
 package first;
 import java.util.Scanner;
 public class seventh {
+    /**
+     * This method reverses an array using recursion.
+     * Time complexity: O(n), where n is the size of the array.
+     * The function swaps elements from start to end.
+     *
+     * @param arr original array
+     * @param length size of the array
+     * @param final1 reversed array
+     * @param iteration current index in recursion
+     * @return reversed array
+     */
     private static int[] solution(int[] arr, int length, int[] final1, int iteration){
         if(iteration>=length){
             return final1;

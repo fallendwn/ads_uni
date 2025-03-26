@@ -1,6 +1,17 @@
 package first;
 import java.util.Scanner;
 public class eighth {
+    /**
+     * This method checks if a string contains only digits using recursion.
+     * Time complexity: O(n), where n is the length of the string.
+     * The function goes through each char and checks if it is a letter.
+     * If it is a letter, it returns false.
+     * If String ends, it returns true.
+     *
+     * @param s input string
+     * @param iteration current index in the string
+     * @return true if the string contains only digits, false otherwise
+     */
     private static boolean solution(String s, int iteration){
         if(iteration >= s.length()){
             return true;
