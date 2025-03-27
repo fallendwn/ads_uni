@@ -1,6 +1,8 @@
 package first;
 import java.util.Scanner;
 public class third {
+
+
     /**
      * This method checks if a number is prime using recursion.
      * Time complexity: O(sqrt(n)), where n is the given number.

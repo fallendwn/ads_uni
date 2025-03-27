@@ -11,7 +11,7 @@ public class tenth {
      * @return GDC(the greatest common divisor) of a and b
      */
     private static int solution(int a, int b){
-        int temp = a-b*(a/b);
+        int temp = a%b;
         if (temp == 0){
             return b;
         }
