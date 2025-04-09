@@ -10,7 +10,8 @@ public class LinkedList<T extends Comparable<T>> {
         tail = null;
         size = 0;
     }
-
+//Because tail and head has a connection, in else statement tail.next becomes newItem node and then,
+    // because tail always is the end, it becames newItem node.
     public void add(T newItem){
         MyNode<T> Node = new MyNode<T>(newItem);
         if (head == null){
@@ -23,7 +24,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
         size++;
     }
-
+//it pushes nodes by .next method and then, returns the data of needed node.
     public T get(int index){
         MyNode<T> returning = head;
         for (int i = 0 ; i < index ; i ++){
@@ -32,6 +33,9 @@ public class LinkedList<T extends Comparable<T>> {
 
         return returning.data;
     }
+    //pushes head node until it reaches the index value
+    //then newnode.next takes all nodes from current.next
+    //then current.next becames newNode
     public void addIndex(int index, T newItem){
         if(index != size) {
             MyNode<T> newNode = new MyNode<T>(newItem);
@@ -48,22 +52,27 @@ public class LinkedList<T extends Comparable<T>> {
             add(newItem);
         }
     }
+    //add method, same logic
     public void addLast(T newItem){
         add(newItem);
     }
+    //creates new node series, and takes head series of nodes to newNode.next
+    //then head becames this newNode
     public void addFirst(T newItem){
         MyNode<T> newNode = new MyNode<T>(newItem);
         newNode.next = head;
         head = newNode;
         size++;
     }
+    //gets the data from head
     public T getFirst(){
         return head.data;
     }
+    //gets the data from tail
     public T getLast(){
         return tail.data;
     }
-
+    //pushes nodes until index, then interchange the data between nodes.
     public void set(int index, T newItem){
         MyNode<T> returning = new MyNode<T>(newItem);
         for (int i = 0 ; i < size ; i ++){
@@ -77,6 +86,7 @@ public class LinkedList<T extends Comparable<T>> {
             tail = returning;
         }
     }
+
     public void remove(int index){
         MyNode<T> current = head;
         if(index == 0){
@@ -87,6 +97,7 @@ public class LinkedList<T extends Comparable<T>> {
             }
         }
         else {
+            //pushes nodes, then next node becames node after next
             for (int i = 0; i < index - 1; i++) {
                 current = current.next;
             }
@@ -98,13 +109,16 @@ public class LinkedList<T extends Comparable<T>> {
         size--;
 
     }
+    //remove index 0
     public void removeFirst(){
         remove(0);
     }
+    //remove size-1
     public void removeLast(){
         remove(size - 1);
     }
-
+    //pushes nodes through nodes, and checks the data. if data satisfies the object value, keep
+    //iteration number and breaks (no need to find others)
     public int indexOf(Object object){
         int result = -1;
         MyNode<T> current = head;
@@ -117,6 +131,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
         return result;
     }
+    //same logic, but does not stops on first finding.
     public int lastIndexOf(Object object){
         int result = -1;
         MyNode<T> current = head;
@@ -128,6 +143,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
         return result;
     }
+    //same logic as in index, but with boolean value
     public boolean exists(Object object){
         boolean result = false;
         MyNode<T> current = head;
@@ -139,7 +155,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
         return result;
     }
-
+    //simple bubble sort, but when the I loop ends, pushes the node.
     public void sort(){
         T temp;
         MyNode<T> current = head;
@@ -157,7 +173,7 @@ public class LinkedList<T extends Comparable<T>> {
 
         }
     }
-
+    //Rewrite nodes data into new array and returns the array
     public Object[] toArray(){
         MyNode<T> current = head;
         Object[] result = new Object[size];
@@ -167,6 +183,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
         return result;
     }
+    //head null tail null
     public void clear(){
         head = null;
         tail = null;
