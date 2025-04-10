@@ -171,7 +171,7 @@ public class ArrayList <T extends Comparable<T>> {
     }
 
 
-    
+
     public void print(){
         for(int i = 0 ; i < size ; i++){
             System.out.print(array[i] + " ");

@@ -1,40 +1,51 @@
 package second;
 import second.ArrayList;
 import second.LinkedList;
-
+import second.MyQueue;
+import second.MyStack;
 import java.nio.file.FileSystemNotFoundException;
 import java.util.Arrays;
-
 public class arraylist_check {
     public static void main(String[] args){
         ArrayList<Integer> list = new ArrayList<Integer>();
         LinkedList<Integer> linked = new LinkedList<>();
-        linked.add(1);
-        linked.add(4);
-        linked.add(3);
-        linked.add(2);
-        linked.add(2);
-        linked.add(2);
-        linked.addIndex(1,6);
-        linked.addFirst(88);
-        linked.addFirst(81);
-        linked.addIndex(7,34287);
-        linked.remove(0);
-        linked.remove(6);
-        linked.remove(2);
-
-        System.out.println(linked.get(0));
-        System.out.println(linked.get(1));
-        System.out.println(linked.get(2));
-        System.out.println(linked.get(3));
-        System.out.println(linked.get(4));
-        linked.sort();
-        System.out.println(Arrays.toString(linked.toArray()));
-        System.out.println(linked.getLast());
-        System.out.println(linked.getFirst());
-        System.out.println(linked.indexOf(2));
-        System.out.println(linked.lastIndexOf(2));
-        System.out.println(linked.exists(88));
+        MyQueue queue = new MyQueue();
+        Object a = new Object();
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(66);
+        queue.print();
+        queue.dequeue();
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.peek());
+        System.out.println(queue.size());
+        queue.print();
+//        linked.add(1);
+//        linked.add(4);
+//        linked.add(3);
+//        linked.add(2);
+//        linked.add(2);
+//        linked.add(2);
+//        linked.addIndex(1,6);
+//        linked.addFirst(88);
+//        linked.addFirst(81);
+//        linked.addIndex(7,34287);
+//        linked.remove(0);
+//        linked.remove(6);
+//        linked.remove(2);
+//
+//        System.out.println(linked.get(0));
+//        System.out.println(linked.get(1));
+//        System.out.println(linked.get(2));
+//        System.out.println(linked.get(3));
+//        System.out.println(linked.get(4));
+//        linked.sort();
+//        System.out.println(Arrays.toString(linked.toArray()));
+//        System.out.println(linked.getLast());
+//        System.out.println(linked.getFirst());
+//        System.out.println(linked.indexOf(2));
+//        System.out.println(linked.lastIndexOf(2));
+//        System.out.println(linked.exists(88));
 
 
 //        System.out.println(linked.get(5));
