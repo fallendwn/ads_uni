@@ -52,6 +52,20 @@ public class LinkedList<T extends Comparable<T>> {
             add(newItem);
         }
     }
+
+
+    public void set1(int index, T value){
+        MyNode<T> current = head;
+        for(int i = 0 ; i < index ; i++){
+            current = current.next;
+        }
+        current.data = value;
+        
+    }
+
+
+
+
     //add method, same logic
     public void addLast(T newItem){
         add(newItem);
