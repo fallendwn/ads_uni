@@ -19,6 +19,7 @@ public class Main {
         astana.addVertex(almaty, 3.0);
         MyGraph<String>.DepthFirstSearch dfs = graph.new DepthFirstSearch();
         System.out.println(dfs.exists("Balkash"));
+
 //        graph.addVertex(astana);
 //        graph.addVertex(karaganda);
 //        graph.addVertex(balkash);

@@ -18,8 +18,9 @@ public class Vertex<T>{
         adjVertexes.put(target, weight);
     }
 
-    public void getWeight(Vertex<T> target){
-        adjVertexes.get(target);
+    public double getWeight(Vertex<T> target){
+
+        return adjVertexes.get(target);
 
     }
 
